@@ -15,7 +15,7 @@
 
 class TextConverter:
     @staticmethod
-    def __bint64list(b: list[str]) \
+    def __bin64list(b: list[str]) \
             -> list[str]:
         """
         Block alignment to 64 bits.
@@ -77,7 +77,7 @@ class TextConverter:
         """
         b = list(map(lambda x: format(x, "b").zfill(8),
                      bytes(t, "cp1251")))
-        b = self.__bint64list(b)
+        b = self.__bin64list(b)
         return b
 
     def bin2str(self, b: list[str]) \
